@@ -18,11 +18,9 @@ public class Empleado {
 		
 	}
 	
-	public Empleado(String nombre, String apellido, Puesto puesto) {
-		super();
+	public Empleado(String nombre, String apellido) {
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.puesto = puesto;
 	}
 
 	@Id

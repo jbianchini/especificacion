@@ -8,6 +8,7 @@ import javax.persistence.Persistence;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 
@@ -45,6 +46,17 @@ public class EntityManagerTest {
 		}
         entityManager.getTransaction().commit();
         entityManager.close();
+	}
+	
+	@Test
+	public void testCreandoEmpleado() {
+		Empleado e = new Empleado("Juan","Posadas");
+		e.setPuesto(new Puesto("Estudia", "Info"));
+		PersonaDAO asist = new PersonaDAO();
+		asist.saveEmpleado(e);
+		Empleado a = new Empleado("Pepe", "Pompin");
+		a.setPuesto(new Puesto("Nono", "Solo klav kalash"));
+		asist.saveEmpleado(a);
 	}
 	
 	
