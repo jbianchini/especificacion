@@ -48,7 +48,7 @@ public class EntityManagerTest {
         entityManager.close();
 	}
 	
-	@Test
+	@Ignore
 	public void testCreandoEmpleado() {
 		Empleado e = new Empleado("Juan","Posadas");
 		e.setPuesto(new Puesto("Estudia", "Info"));

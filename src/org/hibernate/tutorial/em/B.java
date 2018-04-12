@@ -8,6 +8,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.OneToMany;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class B {
@@ -60,10 +61,10 @@ public class B {
 		return aes;
 	}
 	
-	@ManyToMany(mappedBy = "bees")
-	private List<C> cees = new ArrayList<C>();
-	
-	public List<C> getCees(){
-		return cees;
-	}
+//	@ManyToMany(mappedBy = "bees")
+//	private List<C> cees = new ArrayList<C>();
+//	
+//	public List<C> getCees(){
+//		return cees;
+//	}
 }
