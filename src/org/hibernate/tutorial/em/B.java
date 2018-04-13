@@ -61,10 +61,10 @@ public class B {
 		return aes;
 	}
 	
-//	@ManyToMany(mappedBy = "bees")
-//	private List<C> cees = new ArrayList<C>();
-//	
-//	public List<C> getCees(){
-//		return cees;
-//	}
+	@ManyToMany(mappedBy = "bees")
+	private List<C> cees = new ArrayList<C>();
+	
+	public List<C> getCees(){
+		return cees;
+	}
 }

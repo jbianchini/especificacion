@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+@Entity
 public class C {
 	
 	@Id
@@ -49,12 +51,12 @@ public class C {
 		this.c2 = c2;
 	}
 
-//	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-//	private List<B> bees = new ArrayList<B>();
-//	
-//	public List<B> getBees(){
-//		return bees;
-//	}
+	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+	private List<B> bees = new ArrayList<B>();
+	
+	public List<B> getBees(){
+		return bees;
+	}
 	
 	
 }
